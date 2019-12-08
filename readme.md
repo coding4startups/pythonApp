@@ -1,13 +1,7 @@
 # A crypto currency coin manager, built in Python, Flask and MySQL with Apache and the WSGI module, and a little D3.js to make a groovy pie chart. I manage the environment with pipenv and the user auth system uses bcrypt for hashing passwords.
 
-## Purpose: A Flask app that connects to MySQL and uses WSGI for AWS deployment course students. [Find the course here](https://www.udemy.com/deploying-web-apps-simplified-quick-or-in-depth-on-aws)
+## Purpose: A Flask app that connects to MySQL and uses WSGI for AWS deployment course students.
 
-### Overview
-The app is primarily in coin_manager.py and is heavily commented. Similar to Express, it uses routes with get/post methods, and makes use of various response mechanisms (json, render, etc.). Instead of virtualenv, which is the traditional canonical environment manager, I am using the new, and very awesome pipenv. It acts as both pip and virtualenv in one and can manage dependencies (think package.json). You can check out the Pipfile for detail, but I used flask, bcrypt, mysql, and requests. The site (obviously) uses bootstrap, and I used [d3](https://d3js.org/) to make the pie chart svg. jQuery fills in all the other gaps to save time on development, though React or Angular would fit nicely. 
-
-There is a seed database called "coin_manager_seed_db.sql" in the repo. It contains no data; just structure.
-
-A Config.py file is neccessary. This file contains db creds (db, username, pass, and host) as well as what to run in app.run(). There are a variety of ways to manage configuration data in Python, but I come from an OOP background so my tendency in Python is to throw everything into a class. You should change it on your local so the debugger is on (at least I like it).It uses the following format (Note, you will need to update the credentials, assuming they are different):
 ```
 class Config():
   def __init__(self):
